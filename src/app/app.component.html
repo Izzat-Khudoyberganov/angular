@@ -4,12 +4,7 @@
   <h3>This is article text: {{ articleText }}</h3>
 
   <div class="card-container">
-    <ng-container *ngFor="let cart of carts">
-      <app-cart
-        [title]="cart.title"
-        (myTitleChange)="handleClick($event)"
-      ></app-cart>
-    </ng-container>
+    <ng-container *ngFor="let cart of carts"> </ng-container>
   </div>
 
   <ng-container *ngFor="let article of articles">
@@ -19,4 +14,14 @@
       (myTextChange)="handleText($event)"
     ></app-article>
   </ng-container>
+
+  <h1>{{ testTitle }}</h1>
+  <app-test
+    [testTitle]="'hii'"
+    (myTestTitle)="handleTestValue($event)"
+  ></app-test>
+
+  <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+  <app-sidenav></app-sidenav>
 </div>

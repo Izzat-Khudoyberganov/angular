@@ -63,11 +63,17 @@ export class AppComponent {
     },
   ];
 
+  testTitle = '';
+
   handleClick(value: string) {
     this.cardTitle = value;
   }
 
   handleText(value: string) {
     this.articleText = value;
+  }
+
+  handleTestValue(value: string) {
+    this.testTitle = value;
   }
 }
